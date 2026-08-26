@@ -1,0 +1,143 @@
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .project-card {
+        grid-template-columns: 1fr 0.9fr;
+    }
+
+    .hero-grid {
+        gap: 32px;
+    }
+
+    .hero-image-card {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 850px) {
+    :root {
+        --header-height: 68px;
+    }
+
+    section {
+        padding: 90px 0;
+    }
+
+    .nav-links,
+    .nav-actions .nav-button {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    .hero {
+        padding-top: calc(var(--header-height) + 20px);
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .hero-image-container {
+        order: -1;
+        justify-content: flex-start;
+    }
+
+    .hero-image-card {
+        max-width: 260px;
+        aspect-ratio: 4 / 4.8;
+    }
+
+    .hero-highlights {
+        gap: 16px;
+    }
+
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+
+    .project-info {
+        padding: 36px 28px;
+    }
+
+    .project-visual {
+        min-height: 240px;
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding: 32px;
+    }
+
+    .project-visual-badge {
+        font-size: 4rem;
+    }
+
+    .experience-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 28px 0;
+    }
+
+    .experience-date-col {
+        padding-right: 0;
+    }
+
+    .contact-card {
+        padding: 60px 24px;
+    }
+}
+
+@media (max-width: 550px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .hero-image-container {
+        justify-content: center;
+    }
+
+    .hero-image-card {
+        max-width: 230px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-buttons .button {
+        width: 100%;
+    }
+
+    .about-highlight {
+        padding: 24px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+}

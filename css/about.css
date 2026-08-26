@@ -1,0 +1,118 @@
+.about {
+    display: grid;
+    grid-template-columns: 1.25fr 0.95fr;
+    gap: 72px;
+    align-items: start;
+}
+
+.about-text {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+.about-text p {
+    margin-bottom: 24px;
+}
+
+.about-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-highlight {
+    padding: 36px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.about-highlight-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-highlight h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1875rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.about-highlight-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+}
+
+.trajectory {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.trajectory-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: var(--bg-surface-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.trajectory-item:hover {
+    transform: translateX(4px);
+    border-color: var(--primary);
+    background-color: var(--bg-surface);
+}
+
+.trajectory-item-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.trajectory-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    background: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+}
+
+.trajectory-item strong {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.trajectory-item span {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    background: var(--bg-surface);
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+}

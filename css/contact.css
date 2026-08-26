@@ -1,0 +1,114 @@
+.contact-card {
+    background: var(--bg-dark);
+    color: var(--text-inverse);
+    border-radius: var(--radius-lg);
+    padding: 80px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, rgba(15, 23, 42, 0) 70%);
+    pointer-events: none;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-full);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #93c5fd;
+    margin-bottom: 24px;
+}
+
+.contact-card h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.contact-card p {
+    color: #94a3b8;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contact-card .button-outline {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.contact-card .button-outline:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--bg-dark);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--border-dark);
+    z-index: 2000;
+    opacity: 0;
+    transition: transform var(--transition-smooth), opacity var(--transition-smooth);
+    pointer-events: none;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.toast svg {
+    color: #10b981;
+    width: 18px;
+    height: 18px;
+}
